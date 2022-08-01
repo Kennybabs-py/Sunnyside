@@ -1,0 +1,31 @@
+@import "styles/config.scss";
+
+header {
+  // @include border;
+  @include flex;
+  width: 100%;
+  // background-color: skyblue;
+}
+
+.nav {
+  @include flex($justify: space-between);
+  width: 95%;
+  height: 40px;
+
+  .logo {
+    @include flex;
+    // @include border;
+    width: 100px;
+  }
+
+  .links {
+    width: 30%;
+    @include flex($justify: space-around);
+    // @include border;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

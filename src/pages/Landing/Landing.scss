@@ -1,0 +1,207 @@
+@import "styles/config.scss";
+
+section.hero {
+  //   @include border;
+  @include flex;
+  width: 100%;
+  height: 700px;
+  background-image: url("../../assets/desktop/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  .text {
+    // @include border;
+    @include flex;
+    position: absolute;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    top: 3em;
+  }
+}
+
+section.transform {
+  //   @include border;
+  width: 100%;
+  height: 600px;
+  @include flex(center, center, row);
+
+  .text {
+    // @include border;
+    @include flex(center, space-evenly, column wrap);
+    width: 720px;
+    height: 100%;
+    box-sizing: border-box;
+
+    span {
+      //   @include border;
+      text-align: left;
+      width: 400px;
+
+      &:first-of-type {
+        font-size: 2.5em;
+        font-weight: 800;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 1em;
+        font-weight: 500;
+        color: grey;
+      }
+
+      &:nth-of-type(3) {
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .image {
+    background-image: url("../../assets/desktop/egg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+  }
+}
+
+section.standout {
+  //   @include border;
+  width: 100%;
+  height: 600px;
+  @include flex(center, center, row);
+
+  .image {
+    background-image: url("../../assets/desktop/cup.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+  }
+
+  .text {
+    // @include border;
+    @include flex(center, space-evenly, column wrap);
+    width: 720px;
+    height: 100%;
+    box-sizing: border-box;
+
+    span {
+      //   @include border;
+      text-align: left;
+      width: 400px;
+
+      &:first-of-type {
+        font-size: 2.5em;
+        font-weight: 800;
+        // width: 500px;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 1em;
+        font-weight: 500;
+        color: grey;
+      }
+
+      &:nth-of-type(3) {
+        font-size: 1.5em;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+section.graphic-graphy {
+  //   @include border;
+  width: 100%;
+  height: 600px;
+  @include flex(center, center, row);
+
+  div.design {
+    background-image: url("../../assets/desktop/redberry.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+    position: relative;
+    @include flex();
+
+    .text {
+      position: absolute;
+      bottom: 4em;
+      //   @include border;
+      @include flex(center, space-around, column);
+      width: 60%;
+      height: 150px;
+
+      span {
+        text-align: center;
+
+        &:first-of-type {
+          font-size: 1.5em;
+          font-weight: 700;
+        }
+
+        &:last-of-type {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  div.photo {
+    background-image: url("../../assets/desktop/orangeberry.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+    position: relative;
+    @include flex();
+
+    .text {
+      position: absolute;
+      bottom: 4em;
+      //   @include border;
+      @include flex(center, space-around, column);
+      width: 55%;
+      height: 150px;
+
+      span {
+        text-align: center;
+
+        &:first-of-type {
+          font-size: 1.5em;
+          font-weight: 700;
+        }
+
+        &:last-of-type {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+section.testimonials {
+  @include border;
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  @include flex(center, space-around, column);
+
+  .header {
+    @include border;
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    color: grey;
+  }
+}

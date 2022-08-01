@@ -1,0 +1,10 @@
+@mixin border($color: black) {
+  border: 1px solid $color;
+}
+
+@mixin flex($align: center, $justify: center, $flex: row wrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-flow: $flex;
+}
