@@ -2,30 +2,40 @@
 
 header {
   // @include border;
-  @include flex;
+  @include flex(center, center, row);
   width: 100%;
-  // background-color: skyblue;
-}
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgba(62, 191, 255, 255);
 
-.nav {
-  @include flex($justify: space-between);
-  width: 95%;
-  height: 40px;
+  .nav {
+    @include flex($justify: space-between);
+    width: 1250px;
+    height: 40px;
+    color: white;
 
-  .logo {
-    @include flex;
-    // @include border;
-    width: 100px;
+    .logo {
+      @include flex;
+      width: 100px;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .links {
+      width: 30%;
+      @include flex($justify: space-around);
+
+      a {
+        color: white;
+      }
+    }
   }
 
-  .links {
-    width: 30%;
-    @include flex($justify: space-around);
-    // @include border;
+  .hambuger {
+    display: none;
+  }
 
-    a {
-      text-decoration: none;
-      color: black;
-    }
+  .mobile-menu {
+    display: none;
   }
 }

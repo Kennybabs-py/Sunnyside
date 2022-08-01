@@ -1,8 +1,11 @@
 import React from "react";
 
 import "./Landing.scss";
+import Review from "components/Landing/Review/Review";
+import Showcase from "components/Landing/Showcase/Showcase";
+import Footer from "components/Footer/Footer";
 
-const Landing = () => {
+const Landing: React.FC = () => {
   return (
     <main className="landing">
       <section className="hero">
@@ -61,7 +64,11 @@ const Landing = () => {
 
       <section className="testimonials">
         <span className="header">CLIENT TESTIMONIALS</span>
+        <Review />
       </section>
+
+      <Showcase />
+      <Footer />
     </main>
   );
 };

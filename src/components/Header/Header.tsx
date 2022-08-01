@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="nav">
@@ -13,6 +13,8 @@ const Header = () => {
           <a href="//">Contact</a>
         </div>
       </div>
+      <div className="hamburger"></div>
+      <div className="mobile-menu"></div>
     </header>
   );
 };
