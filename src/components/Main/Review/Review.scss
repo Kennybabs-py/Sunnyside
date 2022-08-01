@@ -1,11 +1,44 @@
 @import "styles/config.scss";
 
+section.testimonials {
+  // @include border;
+  width: 100%;
+  height: 700px;
+  background-color: white;
+  @include flex(center, space-evenly, column);
+
+  @include respondMax(mobile) {
+    height: 1000px;
+  }
+
+  .header {
+    // @include border;
+    font-family: "Fraunces", serif;
+    font-size: 1.3em;
+    font-weight: 900;
+    letter-spacing: 4px;
+    word-spacing: 5px;
+    color: grey;
+    margin: auto;
+
+    @include respondMax(mobile) {
+      font-size: 1em;
+      width: max-content;
+    }
+  }
+}
+
 div.review {
   //   @include border;
   @include flex(center, space-around, row wrap);
   width: 1000px;
   height: 400px;
   box-sizing: border-box;
+
+  @include respondMax(mobile) {
+    height: auto;
+    width: 100%;
+  }
 
   .client {
     // @include border;
@@ -21,6 +54,7 @@ div.review {
     .testimony-text {
       //   @include border;
       width: 250px;
+      font-family: "Barlow", sans-serif;
       font-size: 13px;
       text-align: center;
     }
@@ -31,7 +65,10 @@ div.review {
       height: 70px;
 
       span {
+        font-family: "Barlow", sans-serif;
+
         &:first-of-type {
+          font-family: "Fraunces", serif;
           font-weight: 900;
         }
         &:last-of-type {

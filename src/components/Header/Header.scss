@@ -8,34 +8,96 @@ header {
   box-sizing: border-box;
   background-color: rgba(62, 191, 255, 255);
 
+  @include respondMax(mobile) {
+    width: 100%;
+  }
+
   .nav {
     @include flex($justify: space-between);
     width: 1250px;
     height: 40px;
     color: white;
+    // @include border;
+
+    @include respondMax(mobile) {
+      width: 90%;
+    }
 
     .logo {
       @include flex;
-      width: 100px;
+      width: max-content;
+      font-family: "Barlow", sans-serif;
       font-size: 25px;
       font-weight: 800;
+      box-sizing: border-box;
+      // @include border;
+
+      @include respondMax(mobile) {
+        font-size: 15px;
+      }
     }
 
     .links {
       width: 30%;
       @include flex($justify: space-around);
 
+      @include respondMax(mobile) {
+        display: none;
+      }
+
       a {
         color: white;
+        font-family: "Barlow", sans-serif;
       }
     }
-  }
 
-  .hambuger {
-    display: none;
-  }
+    .hamburger-icon {
+      display: none;
 
-  .mobile-menu {
-    display: none;
+      @include respondMax(mobile) {
+        display: inherit;
+      }
+    }
+
+    .mobile-menu {
+      position: absolute;
+      @include flex(center, space-around, column);
+      width: 250px;
+      height: 250px;
+      background-color: white;
+      color: black;
+      z-index: 20;
+      right: 20px;
+      top: 50px;
+      visibility: hidden;
+      transform: translateX(-100px) scale(0);
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      &.open {
+        visibility: visible;
+        transform: translateX(0px) scale(1);
+
+        @include respondMin(mobile) {
+          visibility: hidden;
+        }
+      }
+
+      a {
+        color: black;
+        @include flex;
+        font-family: "Barlow", sans-serif;
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:hover {
+          border-radius: 30px;
+          width: 150px;
+          height: 50px;
+          font-family: "Fraunces", serif;
+          font-size: 18px;
+          font-weight: 900;
+          background-color: hsl(51, 100%, 49%);
+        }
+      }
+    }
   }
 }

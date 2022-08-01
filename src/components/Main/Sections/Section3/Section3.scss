@@ -1,0 +1,119 @@
+@import "styles/config.scss";
+
+section.graphic-graphy {
+  //   @include border;
+  width: 100%;
+  height: 600px;
+  @include flex(center, center, row);
+
+  @include respondMax(mobile) {
+    @include flex(center, center, column);
+    height: 800px;
+  }
+
+  div.design {
+    background-image: url("../../../../assets/desktop/redberry.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+    position: relative;
+    @include flex();
+
+    @include respondMax(mobile) {
+      width: 100%;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 4em;
+      //   @include border;
+      @include flex(center, space-around, column);
+      width: 60%;
+      height: 150px;
+
+      @include respondMax(mobile) {
+        bottom: 2em;
+        width: 80%;
+        height: 100px;
+      }
+
+      span {
+        text-align: center;
+        font-family: "Barlow", sans-serif;
+
+        &:first-of-type {
+          font-family: "Fraunces", serif;
+          font-size: 1.5em;
+          font-weight: 800;
+
+          @include respondMax(mobile) {
+            font-size: 1.2em;
+          }
+        }
+
+        &:last-of-type {
+          font-weight: 500;
+
+          @include respondMax(mobile) {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+
+  div.photo {
+    background-image: url("../../../../assets/desktop/orangeberry.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 720px;
+    height: 100%;
+    position: relative;
+    @include flex();
+
+    @include respondMax(mobile) {
+      width: 100%;
+    }
+
+    .text {
+      position: absolute;
+      bottom: 4em;
+      //   @include border;
+      @include flex(center, space-around, column);
+      width: 55%;
+      height: 150px;
+
+      @include respondMax(mobile) {
+        bottom: 2em;
+        width: 80%;
+        height: 100px;
+      }
+
+      span {
+        text-align: center;
+        font-family: "Barlow", sans-serif;
+
+        &:first-of-type {
+          font-family: "Fraunces", serif;
+          font-size: 1.5em;
+          font-weight: 800;
+
+          @include respondMax(mobile) {
+            font-size: 1.2em;
+          }
+        }
+
+        &:last-of-type {
+          font-weight: 500;
+
+          @include respondMax(mobile) {
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}
