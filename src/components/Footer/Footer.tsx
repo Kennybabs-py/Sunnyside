@@ -1,5 +1,9 @@
 import React from "react";
 import "./Footer.scss";
+import fb from "assets/icons/icon-facebook.svg";
+import ig from "assets/icons/icon-instagram.svg";
+import tw from "assets/icons/icon-twitter.svg";
+import pi from "assets/icons/icon-pinterest.svg";
 
 const Footer = () => {
   return (
@@ -19,16 +23,16 @@ const Footer = () => {
 
       <div className="sm-links">
         <a href="http://" target="_blank" rel="noopener noreferrer">
-          Facebook
+          <img src={fb} alt="facebook" />
         </a>
         <a href="http://" target="_blank" rel="noopener noreferrer">
-          Instagram
+          <img src={ig} alt="intagram" />
         </a>
         <a href="http://" target="_blank" rel="noopener noreferrer">
-          Twitter
+          <img src={tw} alt="twitter" />
         </a>
         <a href="http://" target="_blank" rel="noopener noreferrer">
-          Pinterest
+          <img src={pi} alt="pinterest" />
         </a>
       </div>
     </footer>

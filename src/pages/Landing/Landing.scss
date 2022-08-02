@@ -12,13 +12,15 @@ section.hero {
   background-size: cover;
   position: relative;
 
+  @include respondMax(sm-desktop) {
+    width: 100%;
+    height: 500px;
+  }
+
   @include respondMax(mobile) {
     width: 100%;
     height: 500px;
     background-image: url("../../assets/mobile/hero.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
   }
 
   .text {
@@ -27,16 +29,34 @@ section.hero {
     position: absolute;
     font-family: "Fraunces", serif;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 900;
     letter-spacing: 4px;
     word-spacing: 5px;
     color: white;
     top: 3em;
 
+    @include respondMax(sm-desktop) {
+      top: 1.5em;
+    }
+
     @include respondMax(mobile) {
-      font-size: 2em;
-      top: 5em;
+      width: 90%;
+      font-size: 1.2em;
+      top: 7em;
+    }
+  }
+
+  img.arrow {
+    position: absolute;
+    top: 14em;
+
+    @include respondMax(sm-desktop) {
+      top: 9em;
+    }
+
+    @include respondMax(mobile) {
+      top: 13em;
     }
   }
 }

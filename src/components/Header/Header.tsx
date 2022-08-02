@@ -14,10 +14,10 @@ const Header: React.FC = () => {
       <div className="nav">
         <div className="logo">sunnyside</div>
         <div className="links">
-          <a href="//">About</a>
-          <a href="//">Services</a>
-          <a href="//">Project</a>
-          <a href="//">Contact</a>
+          <a href="#id">About</a>
+          <a href="#id">Services</a>
+          <a href="#id">Project</a>
+          <a href="#id">Contact</a>
         </div>
 
         <img

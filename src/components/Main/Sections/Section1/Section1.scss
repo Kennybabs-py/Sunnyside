@@ -6,8 +6,12 @@ section.transform {
   height: 600px;
   @include flex(center, center, row);
 
+  @include respondMax(sm-desktop) {
+    @include flex($flex: row wrap);
+  }
+
   @include respondMax(mobile) {
-    @include flex(center, center, column-reverse);
+    @include flex($flex: column-reverse);
   }
 
   .text {
@@ -18,6 +22,10 @@ section.transform {
     height: 100%;
     box-sizing: border-box;
 
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
+
     @include respondMax(mobile) {
       width: 100%;
     }
@@ -27,7 +35,7 @@ section.transform {
       text-align: left;
       width: 400px;
 
-      @include respondMax(mobile) {
+      @include respondMax(sm-desktop) {
         text-align: center;
         width: 80%;
       }
@@ -72,6 +80,10 @@ section.transform {
     background-repeat: no-repeat;
     width: 720px;
     height: 100%;
+
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
 
     @include respondMax(mobile) {
       width: 100%;

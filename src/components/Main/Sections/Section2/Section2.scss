@@ -6,6 +6,10 @@ section.standout {
   height: 600px;
   @include flex(center, center, row);
 
+  @include respondMax(sm-desktop) {
+    @include flex($flex: row wrap);
+  }
+
   @include respondMax(mobile) {
     @include flex(center, center, column);
   }
@@ -17,6 +21,10 @@ section.standout {
     background-repeat: no-repeat;
     width: 720px;
     height: 100%;
+
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
 
     @include respondMax(mobile) {
       width: 100%;
@@ -31,6 +39,10 @@ section.standout {
     height: 100%;
     box-sizing: border-box;
 
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
+
     @include respondMax(mobile) {
       width: 100%;
     }
@@ -40,7 +52,7 @@ section.standout {
       text-align: left;
       width: 400px;
 
-      @include respondMax(mobile) {
+      @include respondMax(sm-desktop) {
         text-align: center;
         width: 80%;
       }

@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./Landing.scss";
+import iconDown from "assets/icons/icon-arrow-down.svg";
 
 import Section1 from "components/Main/Sections/Section1/Section1";
 import Section2 from "components/Main/Sections/Section2/Section2";
@@ -12,6 +13,7 @@ const Landing: React.FC = () => {
   return (
     <main className="landing">
       <section className="hero">
+        <img src={iconDown} alt="arrow" className="arrow" />
         <div className="text">WE ARE CREATIVES</div>
       </section>
 

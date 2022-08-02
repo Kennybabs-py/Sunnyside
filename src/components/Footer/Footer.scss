@@ -2,9 +2,9 @@
 
 footer {
   //   @include border;
-  @include flex(center, space-evenly, column);
+  @include flex(center, space-around, column);
   width: 100%;
-  height: 400px;
+  height: 300px;
   margin: 0 auto;
   background-color: hsl(168, 34%, 41%);
   box-sizing: border-box;
@@ -17,7 +17,7 @@ footer {
   }
 
   .nav {
-    @include border;
+    // @include border;
     @include flex(center, space-around, row);
     width: 300px;
     height: 100px;
@@ -30,14 +30,15 @@ footer {
   }
 
   .sm-links {
-    @include border;
     @include flex(center, space-around, row);
-    width: 300px;
-    height: 100px;
+    width: 250px;
+    height: 70px;
 
     a {
+      @include flex;
       color: hsl(167, 57%, 22%);
       font-weight: 600;
+      width: 25%;
     }
   }
 }

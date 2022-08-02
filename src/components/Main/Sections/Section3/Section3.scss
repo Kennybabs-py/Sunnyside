@@ -21,6 +21,10 @@ section.graphic-graphy {
     position: relative;
     @include flex();
 
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
+
     @include respondMax(mobile) {
       width: 100%;
     }
@@ -73,6 +77,10 @@ section.graphic-graphy {
     height: 100%;
     position: relative;
     @include flex();
+
+    @include respondMax(sm-desktop) {
+      width: 50%;
+    }
 
     @include respondMax(mobile) {
       width: 100%;

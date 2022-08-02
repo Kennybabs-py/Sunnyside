@@ -1,12 +1,15 @@
 @import "styles/config.scss";
 
 header {
-  // @include border;
   @include flex(center, center, row);
   width: 100%;
   margin: 0;
   box-sizing: border-box;
   background-color: rgba(62, 191, 255, 255);
+
+  @include respondMax(sm-desktop) {
+    width: 100%;
+  }
 
   @include respondMax(mobile) {
     width: 100%;
@@ -15,9 +18,12 @@ header {
   .nav {
     @include flex($justify: space-between);
     width: 1250px;
-    height: 40px;
+    height: 60px;
     color: white;
-    // @include border;
+
+    @include respondMax(sm-desktop) {
+      width: 90%;
+    }
 
     @include respondMax(mobile) {
       width: 90%;
@@ -30,7 +36,6 @@ header {
       font-size: 25px;
       font-weight: 800;
       box-sizing: border-box;
-      // @include border;
 
       @include respondMax(mobile) {
         font-size: 15px;
@@ -38,8 +43,13 @@ header {
     }
 
     .links {
-      width: 30%;
+      width: 40%;
       @include flex($justify: space-around);
+      box-sizing: border-box;
+
+      @include respondMax(sm-desktop) {
+        width: 50%;
+      }
 
       @include respondMax(mobile) {
         display: none;
@@ -47,7 +57,28 @@ header {
 
       a {
         color: white;
+        @include flex;
         font-family: "Barlow", sans-serif;
+        width: 120px;
+        height: 40px;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+
+        @include respondMax(sm-desktop) {
+          width: 25%;
+          height: 30px;
+        }
+
+        &:hover {
+          border-radius: 12px;
+          font-weight: 700;
+          color: black;
+          background-color: white;
+
+          @include respondMax(sm-desktop) {
+            border-radius: 8px;
+          }
+        }
       }
     }
 
@@ -86,12 +117,12 @@ header {
         color: black;
         @include flex;
         font-family: "Barlow", sans-serif;
+        width: 150px;
+        height: 50px;
         transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
         &:hover {
           border-radius: 30px;
-          width: 150px;
-          height: 50px;
           font-family: "Fraunces", serif;
           font-size: 18px;
           font-weight: 900;
